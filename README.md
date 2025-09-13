@@ -1,5 +1,5 @@
 # Minopus Web App
-## Project Description
+## Project Description heoo
 The project will be a web aplication where students can collaborate to help each other with studying. The main use of the site will be for studying purposes with a heavy focus on study orientated features such as the ability to share questions in text, image and video form. People will be able to use the site for general uses as well but that will be a separate part of the app and will not impact the other part of the site. There will be public servers, private servers and one on one chats which will allow people to share their queries on different levels. They can choose to share their question with the public giving the question the most exposure and the bese chance at being solved or you can share it to a private group chat to get answers from your friends who might be working on similar questions or you can talk to one friend who might be working on the same project as you to collaborate.
 
 ## Functional Requirements
