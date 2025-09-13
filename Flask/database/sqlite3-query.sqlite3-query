@@ -1,0 +1,43 @@
+-- database: ./data_source.db
+
+SELECT * FROM `Group Info`;
+-- Query 1: Count of group chat messages per user (most active group participants)
+SELECT u.Username, COUNT(*) AS message_count
+FROM 'User Info' AS u
+JOIN 'Group Info' AS g ON u.User_id = g.User_id
+GROUP BY u.User_id
+ORDER BY message_count DESC;
+
+-- Query 2: Count of one-on-one conversation messages per user (most active direct chat users)
+SELECT u.Username, COUNT(*) AS message_count
+FROM 'User Info' AS u
+JOIN 'Conversation Info' AS c ON u.User_id = c.User_id
+GROUP BY u.User_id
+ORDER BY message_count DESC;
+
+-- Query 3: Total messages per group subject (most popular study topics)
+SELECT g.Group_Subject, COUNT(*) AS message_count
+FROM 'Group Info' AS g
+JOIN 'User Info' AS u ON g.User_id = u.User_id
+GROUP BY g.Group_Subject
+ORDER BY message_count DESC;
+
+-- Query 4: Number of distinct users (participants) in each group chat
+SELECT g.Group_Subject,
+        COUNT(DISTINCT g.User_id) AS participant_count
+FROM 'Group Info' AS g
+JOIN 'User Info' AS u ON g.User_id = u.User_id
+GROUP BY g.Group_id, g.Group_Subject
+ORDER BY participant_count DESC;
+
+-- Query 5: Total number of messages (group + direct) per user
+SELECT u.'Full Name',
+        COUNT(combined.User_id) AS total_messages
+FROM (
+    SELECT User_id FROM 'Group Info'
+    UNION ALL
+    SELECT User_id FROM 'Conversation Info'
+) AS combined
+JOIN 'User Info' AS u ON combined.User_id = u.User_id
+GROUP BY u.User_id
+ORDER BY total_messages DESC;

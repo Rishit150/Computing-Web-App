@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Topbar partial -->
+    {% include 'partials/topbar.html' %}
+
+    <div class="container">
+        <!-- Menubar partial (left sidebar) -->
+        {% include 'partials/menubar.html' %}
+
+        <!-- Main homepage content -->
+        <main class="home-content">
+            <h1>Welcome, Rishit!</h1>
+            <p>Select or create a study group to get started.</p>
+
+            <section class="section invites">
+                <h2>Invites</h2>
+                <ul>
+                    <li>Math Study Group – <button>Join</button></li>
+                    <li>Physics Study Group – <button>Join</button></li>
+                </ul>
+            </section>
+
+            <section class="section announcements">
+                <h2>Announcements</h2>
+                <p>New study session scheduled for Friday!</p>
+            </section>
+
+            <section class="section friends">
+                <h2>Friends Online</h2>
+                <p>You have 3 friends online.</p>
+            </section>
+        </main>
+
+        <!-- Right sidebar partial -->
+        {% include 'partials/rightsidebar.html' %}
+    </div>
+</body>
+</html>

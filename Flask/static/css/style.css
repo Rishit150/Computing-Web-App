@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, ul, li, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base */
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    background-color: #f5f6fa; /* soft neutral background */
+    color: #2c2f33;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 50px); /* subtract topbar height */
+}
+
+/* Top bar */
+.topbar {
+    background-color: #2f3136;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.topbar-tabs {
+    list-style: none;
+    display: flex;
+}
+.topbar-tabs li {
+    margin-right: 20px;
+}
+.topbar-tabs li a {
+    color: #b9bbbe;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+.topbar-tabs li a:hover {
+    background-color: #40444b;
+    color: white;
+}
+
+/* Left sidebar */
+.sidebar-left {
+    width: 200px;
+    background: linear-gradient(135deg, #ED7845, #F95CA4);
+    min-height: 100vh; /* makes sure it covers the whole viewport */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menubar-logo img {
+    width: 80px;     
+    height: auto;     /* keeps proportions */
+    display: block;
+    margin: 0 auto 20px; /* centers it and adds space below */
+}
+
+.sidebar-title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.sidebar-left .group-list {
+    list-style: none;
+}
+.sidebar-left .group-list li {
+    margin: 8px 0;
+}
+.sidebar-left .group-list li a {
+    color: #b9bbbe;
+    text-decoration: none;
+    display: block;
+    padding: 6px 8px;
+    border-radius: 3px;
+}
+.sidebar-left .group-list li a:hover {
+    background-color: #40444b;
+    color: white;
+}
+
+/* Main content */
+.home-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+.home-content h1 {
+    font-size: 1.5em;
+    color: #2f3136;
+    margin-bottom: 10px;
+}
+.home-content .section {
+    margin-top: 20px;
+}
+.home-content .section h2 {
+    margin-bottom: 8px;
+    color: #2f3136;
+}
+.home-content .section ul {
+    list-style: none;
+}
+.home-content .section ul li {
+    margin: 6px 0;
+}
+.home-content button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border: none;
+    background-color: #7289da;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.home-content button:hover {
+    background-color: #5b6eae;
+}
+
+/* Right sidebar */
+.sidebar-right {
+    width: 250px;
+    background: linear-gradient(135deg, #F95CA4, #ED7845);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Group list with icons */
+.group-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.group-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #b9bbbe;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+.group-btn:hover {
+    background-color: #40444b;
+    color: #fff;
+}
+.group-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    background-color: #7289da; /* Discord blurple */
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.group-label {
+    font-size: 20px;
+    color: #273DB4;
+}
+
+.group-btn:hover .group-label {
+    color: #fff;
+}
+
+.group-icon-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* round like Discord servers */
+    margin-right: 10px;
+    object-fit: cover;   /* makes sure logo fits nicely */
+}
+
+
+/* ===================== */
+/* Sign In Page Styles   */
+/* ===================== */
+.signin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh); /* full height*/
+    background: linear-gradient(135deg, #F95CA4, #ED7845);
+}
+
+.signin-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.signin-logo {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.signin-card h2 {
+    margin-bottom: 1rem;
+    color: #273DB4;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #2c2f33;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background: #273DB4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background: #1d2d85;
+}
+
+.alt-signin {
+    margin-top: 1.5rem;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.google-btn:hover {
+    background: #f0f0f0;
+}
