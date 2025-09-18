@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Maths Group Chat</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="page-layout">
+		
+		<!-- Left menubar -->
+		{% include 'partials/menubar.html' %}
+		
+		<!-- Main Chat Area -->
+		<main class="chat-main">
+			<div class="chat-header">
+				<h2>Maths Group Chat</h2>
+			</div>
+			
+			<div class="chat-box" id="chat-box">
+				<!-- Messages will appear here -->
+			</div>
+			
+			<form class="chat-input" onsubmit="sendMessage(event)">
+				<input type="text" id="message" placeholder="Type your message..." required>
+				<button type="submit">Send</button>
+			</form>
+		</main>
+		
+		<!-- Right sidebar -->
+		{% include 'partials/rightsidebar.html' %}
+	</div>
+
+	<script>
+		function sendMessage(event) {
+			event.preventDefault();
+			const input = document.getElementById("message");
+			const chatBox = document.getElementById("chat-box");
+
+			// Create message div
+			const msg = document.createElement("div");
+			msg.classList.add("chat-message");
+			msg.textContent = input.value;
+
+			chatBox.appendChild(msg);
+			chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
+			input.value = "";
+		}
+	</script>
+</body>
+</html>

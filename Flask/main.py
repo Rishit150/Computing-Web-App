@@ -44,5 +44,10 @@ def settings():
     return render_template("settings/settings.html")
 
 
+@app.route("/maths")
+def maths_chat():
+    return render_template("groups/maths_chat.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5100)
