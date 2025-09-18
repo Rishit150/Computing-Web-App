@@ -280,3 +280,213 @@ body {
 .google-btn:hover {
     background: #f0f0f0;
 }
+
+.google-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* keep text centered */
+    position: relative;      /* allow absolute positioning for logo */
+}
+
+.google-btn:hover {
+    background: #f0f0f0;
+}
+
+.google-logo {
+    width: 28px;   /* make it bigger */
+    height: 28px;
+    position: absolute;
+    left: 20px;    /* move slightly to the left inside button */
+}
+
+
+/* === Friends Page Styles === */
+
+.friends-page {
+	background-color: #eef2ff;  /* soft light blue background */
+	padding: 20px;
+	width: 100%;
+}
+
+.friends-search {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.friends-search input {
+	width: 60%;
+	max-width: 400px;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.friends-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.friend-entry {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.friend-avatar {
+	width: 40px;
+	height: 40px;
+	background-color: #7289da; /* Discord-like blue */
+	color: white;
+	font-weight: bold;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 12px;
+}
+
+.friend-name {
+	font-size: 1.1rem;
+	color: #2c2f33;
+	flex: 1;
+}
+
+.friend-status {
+	font-size: 0.9rem;
+	color: #888;
+}
+
+.friend-entry.online .friend-status {
+	color: #3ba55d;  /* green for online */
+}
+
+.friend-entry.offline .friend-status {
+	color: #747f8d;  /* gray for offline */
+}
+
+
+/* === Settings Page Styles === */
+
+.settings-page {
+	background-color: #f5f6fa;
+	padding: 20px;
+	width: 100%;
+}
+
+.settings-page h1 {
+	font-size: 1.8rem;
+	color: #2c2f33;
+	margin-bottom: 20px;
+}
+
+.settings-section {
+	margin-bottom: 30px;
+}
+
+.settings-section h2 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #273DB4;
+}
+
+.settings-card {
+	background: #fff;
+	border-radius: 12px;
+	padding: 16px 20px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.settings-btn {
+	padding: 6px 14px;
+	background-color: #273DB4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+.settings-btn:hover {
+	background-color: #1d2d85;
+}
+
+/* Site Wide Bacground Colour Change*/
+.home-content,
+.friends-page,
+.settings-page {
+	background: linear-gradient(45deg, #d6c8ff, #a18cd1);
+}
+
+/* ===================== */
+/* Friends & Settings UI */
+/* ===================== */
+
+/* Friends list cards */
+.friend-entry {
+	background: #444; /* lighter gray background */
+	color: #fff;
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Friend names stay readable */
+.friend-name {
+	color: #fff;
+}
+
+/* Friend status (online/offline) */
+.friend-status {
+	color: #b9bbbe;
+}
+
+.friend-entry.online .friend-status {
+	color: #3ba55d;  /* green for online */
+}
+
+.friend-entry.offline .friend-status {
+	color: #747f8d;  /* gray for offline */
+}
+
+/* Settings cards */
+.settings-card {
+	background: #444; /* lighter gray */
+	color: #fff;
+	border-radius: 12px;
+	padding: 16px 20px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+/* Settings buttons */
+.settings-btn {
+	background-color: #7289da; /* Discord blurple */
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 6px 14px;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+.settings-btn:hover {
+	background-color: #5b6eae;
+}

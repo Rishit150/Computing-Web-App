@@ -34,5 +34,15 @@ def homepage():
     return render_template('partials/homepage.html', content=data)
 
 
+@app.route("/friends")
+def friends():
+    return render_template("friends/friends.html")
+
+
+@app.route("/settings")
+def settings():
+    return render_template("settings/settings.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5100)

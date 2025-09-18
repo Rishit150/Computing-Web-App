@@ -1,8 +1,8 @@
 <nav class="topbar">
     <ul class="topbar-tabs">
-        <li><a href="#">All</a></li>
-        <li><a href="#">Friends</a></li>
-        <li><a href="#">Groups</a></li>
-        <li><a href="#">Other</a></li>
+	    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+	    <li><a href="{{ url_for('friends') }}">Friends</a></li>
+	    <li><a href="#">Groups</a></li>
+	    <li><a href="{{ url_for('settings') }}">Settings</a></li>
     </ul>
 </nav>

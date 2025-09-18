@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Settings</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="page-container">
+		{% include 'partials/topbar.html' %}
+		<div class="container">
+			{% include 'partials/menubar.html' %}
+
+			<main class="home-content settings-page">
+				<h1>Settings</h1>
+				
+				<div class="settings-section">
+					<h2>Account</h2>
+					<div class="settings-card">
+						<p><strong>Username:</strong> Rishit</p>
+						<p><strong>Email:</strong> rishit@example.com</p>
+						<button class="settings-btn">Edit</button>
+					</div>
+				</div>
+
+				<div class="settings-section">
+					<h2>Appearance</h2>
+					<div class="settings-card">
+						<p>Theme: Light</p>
+						<button class="settings-btn">Change Theme</button>
+					</div>
+				</div>
+
+				<div class="settings-section">
+					<h2>Privacy</h2>
+					<div class="settings-card">
+						<p>2-Factor Authentication: Enabled</p>
+						<button class="settings-btn">Manage</button>
+					</div>
+				</div>
+			</main>
+
+			{% include 'partials/rightsidebar.html' %}
+		</div>
+	</div>
+</body>
+</html>

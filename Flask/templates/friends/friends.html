@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friends</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="page-container">
+		{% include 'partials/topbar.html' %}
+		<div class="container">
+			{% include 'partials/menubar.html' %}
+
+			<main class="home-content friends-page">
+				<h1>Friends</h1>
+				<div class="friends-search">
+					<input type="text" placeholder="Search friends..." />
+				</div>
+				<div class="friends-list">
+					<div class="friend-entry online">
+						<div class="friend-avatar">A</div>
+						<div class="friend-name">Alice</div>
+						<div class="friend-status">Online</div>
+					</div>
+                    <div class="friend-entry online">
+                        <div class="friend-avatar">E</div>
+                        <div class="friend-name">Eve</div>
+                        <div class="friend-status">Online</div>
+                    </div>
+                    <div class="friend-entry online">
+                        <div class="friend-avatar">C</div>
+                        <div class="friend-name">Charlie</div>
+                        <div class="friend-status">Online</div>
+                    </div>
+					<div class="friend-entry offline">
+						<div class="friend-avatar">B</div>
+						<div class="friend-name">Bob</div>
+						<div class="friend-status">Offline</div>
+					</div>
+                    <div class="friend-entry offline">
+                        <div class="friend-avatar">D</div>
+                        <div class="friend-name">Diana</div>
+                        <div class="friend-status">Offline</div>
+                    </div>
+                    
+				</div>
+			</main>
+
+			{% include 'partials/rightsidebar.html' %}
+		</div>
+	</div>
+</body>
+</html>
