@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Study Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <!-- Topbar partial -->
-    {% include 'partials/topbar.html' %}
+	<div class="page-container">
+		{% include 'partials/topbar.html' %}
+		<div class="container">
+			{% include 'partials/menubar.html' %}
 
-    <div class="container">
-        <!-- Menubar partial (left sidebar) -->
-        {% include 'partials/menubar.html' %}
+			<main class="home-content homepage-page">
+				<div class="homepage-card">
+					<h1>Welcome, Rishit!</h1>
+					<p>This is your study hub. Join groups, connect with friends, and stay organised.</p>
+				</div>
 
-        <!-- Main homepage content -->
-        <main class="home-content">
-            <h1>Welcome, Rishit!</h1>
-            <p>Select or create a study group to get started.</p>
+				<div class="homepage-card">
+					<h2>Quick Links</h2>
+					<ul>
+						<li><a href="{{ url_for('friends') }}">Go to Friends</a></li>
+						<li><a href="{{ url_for('settings') }}">Go to Settings</a></li>
+					</ul>
+				</div>
 
-            <section class="section invites">
-                <h2>Invites</h2>
-                <ul>
-                    <li>Math Study Group – <button>Join</button></li>
-                    <li>Physics Study Group – <button>Join</button></li>
-                </ul>
-            </section>
+				<div class="homepage-card">
+					<h2>Announcements</h2>
+					<p>No announcements yet. Stay tuned!</p>
+				</div>
+			</main>
 
-            <section class="section announcements">
-                <h2>Announcements</h2>
-                <p>New study session scheduled for Friday!</p>
-            </section>
-
-            <section class="section friends">
-                <h2>Friends Online</h2>
-                <p>You have 3 friends online.</p>
-            </section>
-        </main>
-
-        <!-- Right sidebar partial -->
-        {% include 'partials/rightsidebar.html' %}
-    </div>
+			{% include 'partials/rightsidebar.html' %}
+		</div>
+	</div>
 </body>
 </html>

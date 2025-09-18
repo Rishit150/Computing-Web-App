@@ -63,7 +63,7 @@ body {
 .sidebar-left {
     width: 200px;
     background: linear-gradient(135deg, #ED7845, #F95CA4);
-    min-height: 100vh; /* makes sure it covers the whole viewport */
+    min-height: 80vh; /* makes sure it covers the whole viewport */
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -368,11 +368,11 @@ body {
 }
 
 .friend-entry.online .friend-status {
-	color: #3ba55d;  /* green for online */
+	color: rgb(10, 232, 10) !important;
 }
 
 .friend-entry.offline .friend-status {
-	color: #747f8d;  /* gray for offline */
+	color: rgb(255, 39, 39) !important;
 }
 
 
@@ -489,4 +489,45 @@ body {
 
 .settings-btn:hover {
 	background-color: #5b6eae;
+}
+
+
+/* === Homepage Cards === */
+.homepage-card {
+	background: #2f3136; /* dark mode card */
+	color: #fff;
+	border-radius: 12px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.homepage-card h1 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.homepage-card h2 {
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+	color: white; /* accent colour */
+}
+
+.homepage-card ul {
+	list-style: none;
+	padding: 0;
+}
+
+.homepage-card ul li {
+	margin: 6px 0;
+}
+
+.homepage-card ul li a {
+	color: #7289da;
+	text-decoration: none;
+}
+
+.homepage-card ul li a:hover {
+	text-decoration: underline;
 }
