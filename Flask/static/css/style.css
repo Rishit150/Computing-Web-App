@@ -86,16 +86,34 @@ body {
 .sidebar-left .group-list li {
     margin: 8px 0;
 }
-.sidebar-left .group-list li a {
-    color: #b9bbbe;
-    text-decoration: none;
-    display: block;
-    padding: 6px 8px;
-    border-radius: 3px;
+/* Make anchors and buttons identical (flex + vertical centre) */
+.group-link,
+.group-btn {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 6px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	/* Unified look */
+	background: none;
+	border: none;
+	text-decoration: none;
+	color: #b9bbbe;
 }
-.sidebar-left .group-list li a:hover {
-    background-color: #40444b;
-    color: white;
+
+.group-link:hover,
+.group-btn:hover {
+	background-color: #40444b;
+	color: #fff;
+}
+
+.group-link:hover .group-label,
+.group-btn:hover .group-label {
+	color: #fff;
 }
 
 /* Main content */
@@ -181,8 +199,10 @@ body {
     font-weight: bold;
 }
 .group-label {
-    font-size: 20px;
-    color: #273DB4;
+	font-size: 20px;
+	color: #273DB4;
+	font-weight: 600;
+	line-height: 1; /* prevents extra vertical spacing */
 }
 
 .group-btn:hover .group-label {
@@ -190,11 +210,11 @@ body {
 }
 
 .group-icon-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;  /* round like Discord servers */
-    margin-right: 10px;
-    object-fit: cover;   /* makes sure logo fits nicely */
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	margin-right: 12px;
+	object-fit: cover;
 }
 
 
@@ -534,16 +554,23 @@ body {
 
 
 /* Chat Page Styles */
+.page-layout {
+	display: grid;
+	grid-template-columns: 200px 1fr 250px;
+	height: calc(100vh - 50px); /* fills viewport under topbar */
+}
+
 .chat-main {
-	flex: 1;
 	display: flex;
 	flex-direction: column;
-	background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+	background: linear-gradient(45deg, #a18cd1, #d8a1f9);
 	padding: 1rem;
+	height: 100%;
+	overflow: hidden;
 }
 
 .chat-header {
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.3);
 	padding: 0.75rem 1rem;
 	border-radius: 8px;
 	margin-bottom: 1rem;
@@ -552,7 +579,7 @@ body {
 
 .chat-box {
 	flex: 1;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.05);
 	border-radius: 8px;
 	padding: 1rem;
 	overflow-y: auto;
@@ -569,6 +596,7 @@ body {
 
 .chat-input {
 	display: flex;
+	margin-top: auto; /* keeps it at bottom */
 }
 
 .chat-input input {

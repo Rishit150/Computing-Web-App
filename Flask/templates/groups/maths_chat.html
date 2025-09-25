@@ -6,19 +6,22 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+	<!-- Topbar -->
+	{% include 'partials/topbar.html' %}
+
 	<div class="page-layout">
 		
-		<!-- Left menubar -->
+		<!-- Left Sidebar -->
 		{% include 'partials/menubar.html' %}
 		
-		<!-- Main Chat Area -->
+		<!-- Chat Main Content -->
 		<main class="chat-main">
 			<div class="chat-header">
 				<h2>Maths Group Chat</h2>
 			</div>
 			
 			<div class="chat-box" id="chat-box">
-				<!-- Messages will appear here -->
+				<!-- Messages appear here -->
 			</div>
 			
 			<form class="chat-input" onsubmit="sendMessage(event)">
@@ -27,8 +30,9 @@
 			</form>
 		</main>
 		
-		<!-- Right sidebar -->
+		<!-- Right Sidebar -->
 		{% include 'partials/rightsidebar.html' %}
+		
 	</div>
 
 	<script>
@@ -37,13 +41,12 @@
 			const input = document.getElementById("message");
 			const chatBox = document.getElementById("chat-box");
 
-			// Create message div
 			const msg = document.createElement("div");
 			msg.classList.add("chat-message");
 			msg.textContent = input.value;
 
 			chatBox.appendChild(msg);
-			chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
+			chatBox.scrollTop = chatBox.scrollHeight;
 			input.value = "";
 		}
 	</script>
