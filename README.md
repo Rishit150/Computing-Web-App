@@ -67,3 +67,8 @@ Test steps:
 7. Click sign up button. 
 8. If username and password are valid. 
 Expected result: The user is able to sign up and now has a registered username and password to login in next time. 
+
+
+14/10/2025
+Added sign up functionality that sends the information to the database/backend which can be recalled later when sigining in again after the user has logged out.
+
