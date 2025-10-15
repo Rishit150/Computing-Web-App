@@ -30,7 +30,7 @@ This is the first page that users will see where they have to login in. There ar
 ![Page 2](/Flask/working_documents/1st%20design%20main1.png)
 This is the main page that users see and is the page they arrive on after loging in. This page displays important information such as friends you have and their online/offline status as well as having sidebars that display more information such as dms that you have. You can click on the dms to full screen them as a chat and can add friends by clicking the add friend button. There is a menubar at the top where you can enter more menus when you click on the buttons and finally there is another side menu on the far left with houses the different groups which you can click on to enter the group chat.
 
-![Page 3](/Flask/working_documents/1st%20design%20chat.png)
+![Page 3](/Computing-Web-App//Flask/working_documents/1st%20design%20chat.png)
 This page is representative of a dm chat but can also be used to illustrate what a group chat looks like where you can chat to others about your work. The sidebars and top menubar remain in place which is a feature of the website allowing for easy navigation around the website.
 
 
