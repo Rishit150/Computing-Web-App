@@ -23,6 +23,16 @@ The project will be a web aplication where students can collaborate to help each
 |                                                                                                                                                                                                                                | For my Sans Serif font I chose "Rleud Demo" as I thought it looked good and matched the site.                                                                                      |                                                                                                                                                                                                      |
 |                                                                                                                                                                                                                                | From the article "A guide to typography" I also found that Serif fonts are best for headings and large text however I couldn't find anything that would work on the site.         |                                                                                                                                                                                                      |
 
+## Annotated Pages
+![Page 1](/Flask/working_documents/1st%20design%20login.png)
+This is the first page that users will see where they have to login in. There are three signin options users can choose from giving them flexibility. These will function as buttons that redirect users to other dedicated pages where they can actually signin. There is a bit of information on the page at the bottom telling the user a little about the website. There are three more buttons on the top of the page which allow you to download as an app go to a support page and login using email.
+
+![Page 2](/Flask/working_documents/1st%20design%20main1.png)
+This is the main page that users see and is the page they arrive on after loging in. This page displays important information such as friends you have and their online/offline status as well as having sidebars that display more information such as dms that you have. You can click on the dms to full screen them as a chat and can add friends by clicking the add friend button. There is a menubar at the top where you can enter more menus when you click on the buttons and finally there is another side menu on the far left with houses the different groups which you can click on to enter the group chat.
+
+![Page 3](/Flask/working_documents/1st%20design%20chat.png)
+This page is representative of a dm chat but can also be used to illustrate what a group chat looks like where you can chat to others about your work. The sidebars and top menubar remain in place which is a feature of the website allowing for easy navigation around the website.
+
 
 ## Best Practice Approaches
 I have used multiple best practice approaches to ensure that the site is developed efficiently and properly. I used a website which gave some preset colour schemes that ensured I was using colours that worked well together and looked nice overall. I used another website to conduct research on typography to assess what font will look and work the best on the website in certain places.
