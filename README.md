@@ -78,7 +78,8 @@ Test steps:
 8. If username and password are valid. 
 Expected result: The user is able to sign up and now has a registered username and password to login in next time. 
 
-
+## Week 11
 14/10/2025
 Added sign up functionality that sends the information to the database/backend which can be recalled later when sigining in again after the user has logged out.
 
+Got the chat functionality working where it writes the chat message history into the database so it saves and can be retireved even when you log out.
